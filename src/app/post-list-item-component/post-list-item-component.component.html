@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <li class="ArticleItem" [ngClass]="{'list-group-item': true, 
+                      'list-group-item-success': loveIts > 0,
+
+                      'list-group-item-danger': loveIts <0 }">
+        <div class="row">
+          <div class="col-4">
+            <h2 class="titre">{{ postTitre }}</h2>
+          </div>
+          <div class="offset-5 col-3">
+            <p class="date">{{ postDate | date: "short" }}</p>
+          </div>
+          <div class="col-12">
+            <p class="article">{{ postArticle }}</p>
+          </div>
+          <div class="col-4">
+            <button type="button" class="btn btn-success" (click)="loveIts= loveIts+1">Love It !</button>
+            <button type="button" class="btn btn-danger" (click)="loveIts= loveIts-1">Dont't love It !</button>
+          </div>
+        </div>
+      </li>
+    </div>
+  </div>
+</div>
